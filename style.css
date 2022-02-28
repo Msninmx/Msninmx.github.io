@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+/* ----- Catppuccin Colours ----- */
+
+
+:root {
+
+    /* ----- rainbow ----- */
+
+    /*                 H     S     L */
+    --rosewater_hsl:  10,  56%,  91%;
+    --flamingo_hsl:    0,  59%,  88%;
+    --mauve_hsl:     279,  70%,  83%;
+    --pink_hsl:      316,  72%,  86%;
+    --maroon_hsl:    349,  60%,  77%;
+    --red_hsl:       342,  79%,  75%;
+    --peach_hsl:      24,  88%,  78%;
+    --yellow_hsl:     41,  88%,  84%;
+    --green_hsl:     128,  58%,  79%;
+    --teal_hsl:      171,  53%,  81%;
+    --blue_hsl:      207,  93%,  79%;
+    --sky_hsl:       189,  71%,  73%;
+    --lavender_hsl:  238, 100%,  89%;
+
+
+
+    /* ----- black & white ----- */
+
+    /*                 H     S     L */
+    --black0_hsl:    254,  25%,  10%;
+    --black1_hsl:    249,  23%,  12%;
+    --black2_hsl:    240,  21%,  15%;
+    --black3_hsl:    249,  18%,  22%;
+    --black4_hsl:    254,  12%,  36%;
+    --gray0_hsl:     247,   8%,  46%;
+    --gray1_hsl:     274,  11%,  59%;
+    --gray2_hsl:     285,  10%,  75%;
+    --white_hsl:     220,  38%,  89%;
+
+
+
+    /* ----- variables ----- */
+
+    --rosewater:     hsl(var(--rosewater_hsl));
+    --flamingo:      hsl(var(--flamingo_hsl));
+    --mauve:         hsl(var(--mauve_hsl));
+    --pink:          hsl(var(--pink_hsl));
+    --maroon:        hsl(var(--maroon_hsl));
+    --red:           hsl(var(--red_hsl));
+    --peach:         hsl(var(--peach_hsl));
+    --yellow:        hsl(var(--yellow_hsl));
+    --green:         hsl(var(--green_hsl));
+    --teal:          hsl(var(--teal_hsl));
+    --blue:          hsl(var(--blue_hsl));
+    --sky:           hsl(var(--sky_hsl));
+    --lavender:      hsl(var(--lavender_hsl));
+    --black0:        hsl(var(--black0_hsl));
+    --black1:        hsl(var(--black1_hsl));
+    --black2:        hsl(var(--black2_hsl));
+    --black3:        hsl(var(--black3_hsl));
+    --black4:        hsl(var(--black4_hsl));
+    --gray0:         hsl(var(--gray0_hsl));
+    --gray1:         hsl(var(--gray1_hsl));
+    --gray2:         hsl(var(--gray2_hsl));
+    --white:         hsl(var(--white_hsl));
+
+}
+
+html {
+  background-color: var(--black2);
+  align-items: center;
+  color: var(--yellow);
+  display: flex;
+  font-family: "PT Mono", monospace;
+  font-size: 25px;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+body {
+  display: flex;
+  margin: 1em;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 1.5em;
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  color: var(--red);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: var(--blue);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1em;
+  min-width: 14em;
+  padding: 1em 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+li:first-child {
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--mauve);
+}
+
+img {
+  border: 1px solid var(--gray0);
+  height: auto;
+  object-fit: cover;
+  object-position: 100% 100%;
+  width: 10em;
+}
+
+input {
+  background-color: unset;
+  font: 16px "PT Mono", monospace;
+  color: var(--yellow);
+  height: 30%;
+  width: 100%;
+  border-top-style: hidden;
+  border-bottom-style: solid;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-color: var(--peach);
+  text-align: left;
+  margin-top: 50px;
+  outline: 0;
+  padding-bottom: 0;
+}
