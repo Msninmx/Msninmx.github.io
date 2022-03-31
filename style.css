@@ -127,8 +127,8 @@ img {
   border: 1px solid var(--gray0);
   height: auto;
   object-fit: cover;
-  object-position: 100% 100%;
-  width: 10em;
+  object-position: 50% 100%;
+  width: 15em;
 }
 
 input {
