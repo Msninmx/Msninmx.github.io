@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Startpage</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" />
   </head>
   <body>
-    <nav>
-      <h1>Startpage</h1>
-      <ul>
-        <li>General</li>
-        <li><a href="https://www.google.com">Google</a>
-        <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
-        <li><a href="https://www.youtube.com">YouTube</a>
-        <li><a href="https://www.reddit.com">Reddit</a>
-        <li><a href="https://web.whatsapp.com">WhatsApp</a>
-        <li><a href="https://twitter.com/">Twitter</a>
-      </ul>
+    <div class="everything">
+      <div id="time" class="time"></div>
+      <form action="https://www.google.com/search" method="GET">
+        <input
+          autofocus
+          name="q"
+          class="search"
+          type="search"
+          id="search-bar-input"
+          placeholder=""
+        />
+      </form>
+      <div class="box">
+        <div class="link">
+          <ul>
+            <li>General</li>
+            <li><a href="https://www.google.com">Google</a>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+            <li><a href="https://www.youtube.com">YouTube</a>
+            <li><a href="https://www.reddit.com">Reddit</a>
+            <li><a href="https://web.whatsapp.com">WhatsApp</a>
+            <li><a href="https://twitter.com/">Twitter</a>
+          </ul>
+        </div>
+        <div class="link">
+          <ul>
+            <li>School</li>
+            <li><a href="https://outlook.office.com/mail/">Outlook</a>
+            <li><a href="https://mitec.itesm.mx">MiTec</a>
+            <li><a href="https://student.cengage.com/dashboard">WebAssign</a>
+            <li><a href="https://experiencia21.tec.mx">Canvas</a>
+          </ul>
+        </div>
+        <div class="link">
+          <ul>
+            <li>Programming</li>
+            <li><a href="https://www.wolframalpha.com/">WolframAlpha</a>
+            <li><a href="https://matlab.mathworks.com/">MatLab</a>
+            <li><a href="https://rstudio.cloud/content/yours?sort=name_asc">RStudio</a>
+          </ul>
+        </div>
+        <!-- Feel free to add more divs here -->
+      </div>
+    </div>
+    <script>
+      function updateClock() {
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let ampm = hours >= 12 ? "pm" : "am";
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        let time = hours + ":" + minutes + " " + ampm;
+        document.getElementById("time").innerHTML = time;
+        setTimeout(updateClock, 1000);
+      }
 
-      <ul>
-        <li>School</li>
-        <li><a href="https://outlook.office.com/mail/">Outlook</a>
-        <li><a href="https://mitec.itesm.mx">MiTec</a>
-        <li><a href="https://student.cengage.com/dashboard">WebAssign</a>
-        <li><a href="https://experiencia21.tec.mx">Canvas</a>
-      </ul>
-
-      <ul>
-        <li>Programming</li>
-        <li><a href="https://www.wolframalpha.com/">WolframAlpha</a>
-        <li><a href="https://matlab.mathworks.com/">MatLab</a>
-        <li><a href="https://rstudio.cloud/content/yours?sort=name_asc">RStudio</a>
-      </ul>
-
-      <ul>
-        <li>Website</li>
-        <li><a href="https://msninmx.github.io/quartz">Online Zettlekasten</a>
-        <li><a href="https://github.com/Msninmx/quartz">Github Repo</a>
-      </ul>
-
-    <form action="https://www.google.com/search" method="GET">
-      <input autofocus
-        name="q"
-        type="search"
-        placeholder="Google">
-    </form>
-    </nav>
-
-    <img src="logo.png" alt="anticodeflower">
-
+      updateClock();
+    </script>
   </body>
 </html>
